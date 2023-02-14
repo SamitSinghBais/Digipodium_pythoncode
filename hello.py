@@ -1,4 +1,4 @@
-from turtle import*
+from turtle import *
 speed('fastest')
 pencolor('orange')
 fillcolor('blue')
