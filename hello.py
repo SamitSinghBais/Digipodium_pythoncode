@@ -1,12 +1,12 @@
 from turtle import *
-speed('fastest')
-pencolor('orange')
+speed('slowest')
+pencolor('green')
 fillcolor('blue')
 
 for i in range(6):
-   fd(100)
+   fd(200)
    for i in range(6):
-      fd(50)
+      fd(100)
       begin_fill()
       for i in range(6):
         fd(50)
