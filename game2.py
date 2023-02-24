@@ -1,11 +1,11 @@
 import pgzrun
 
 music.play('m1')
-alien = Actor('images')
-alien.topright = 0, 10
+alien = Actor('i1')
+alien.topright = 0, 100
 
-WIDTH = 500
-HEIGHT = alien.height + 20
+WIDTH = 800
+HEIGHT = alien.height + 200
 
 
 def draw():
@@ -22,11 +22,11 @@ def update():
 score = 0
 
 
-def on_mouse_down(pos):
+def keyboard_right(pos):
     global score
     if alien.collidepoint(pos):
         sounds.s1.play()
-        alien.images.image = 'alien_hurt'
+        alien.i1.image = 'alien_hurt'
         score += 1
     else:
         score -= 1

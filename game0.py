@@ -5,8 +5,8 @@ b = Rect((50,50),(100,100))
 vx, vy = 5,5 # global variable
 
 def draw():
-    screen.fill('skyblue')
-    screen.draw.filled_rect(b,'darkgreen')
+    screen.fill('black')
+    screen.draw.filled_rect(b,'purple')
 
 def update():
     global vx, vy
