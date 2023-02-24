@@ -1,21 +1,30 @@
 import pgzrun
 
-#music.play('sound1')
-b = Rect((50,50),(100,100))
-vx, vy = 3,5 # global variable
+music.play('m1')
+
+b = Rect((15,15),(100,100))
+b = Actor ('i1' , (200,200))
+
+
+vx, vy = 3,3 # global variable
 
 def draw():
-    screen.fill('black')
-    screen.draw.filled_rect(b,'green')
-    #b.draw()
+    screen.fill('skyblue')
+
+    #screen.draw.filled_rect(b,'darkgreen')
+
+    b.draw()
+
 def update():
     global vx, vy
     b.x += vx
     b.y += vy
     if b.right > 800 or b.left < 0:
         vx = -vx
-        #sounds.s1.play()
+        sounds.s1.play()
+
     if b.bottom > 600 or b.top < 0:
         vy = -vy
-        #sounds.si.play()
+        sounds.s1.play()
+
 pgzrun.go()
