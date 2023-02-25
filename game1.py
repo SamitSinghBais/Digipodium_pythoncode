@@ -2,15 +2,16 @@ import pgzrun
 
 music.play('m1')
 
-b = Rect((15,15),(100,100))
+#b = Rect((15,15),(100,100))
 b = Actor('i1' , (200,200))
 
 
 vx, vy = 3,3 # global variable
 
 def draw():
-    screen.fill('skyblue')
-    screen.draw.filled_rect(b,'green')
+    #screen.fill('skyblue')
+    screen.blit("ks1",pos=(0,0))
+    #screen.draw.filled_rect(b,'green')
 
     b.draw()
 

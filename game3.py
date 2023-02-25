@@ -5,8 +5,7 @@ WIDTH = 800
 HEIGHT = 600
 
 
-
-image = Actor('i3')
+image = Actor('i2')
 image.x = 400
 image.y = HEIGHT-100
 
@@ -22,6 +21,7 @@ def update():
     elif keyboard.down:
         image.y +=vy
 
+
     if image.x <= 75:
         image.x = 75
         sounds.s2.play()
@@ -36,10 +36,11 @@ def update():
         sounds.s2.play()
 
      
-
 def draw():
-    screen.fill("black")
+    #screen.fill("black")
+    screen.blit("ks1", pos=(0,0))
     image.draw()
+
 
 pgzrun.go()
      
