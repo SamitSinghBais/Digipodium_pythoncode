@@ -4,7 +4,7 @@ import random
 WIDTH=800
 HEIGHT=600
 
-tank = Actor('tank_black')
+tank = Actor('tank_top')
 tank.y = 575
 tank.x = 400
 tank.angle = 90
@@ -31,17 +31,21 @@ def update():
     original_y = tank.y
 
     if keyboard.left:
-        tank.x = tank.x - 2
+        tank.x = tank.x - 1
         tank.angle = 360
+        sounds.s4.play()
     elif keyboard.right:
-        tank.x = tank.x + 2
+        tank.x = tank.x + 1
         tank.angle = 180
+        sounds.s4.play()
     elif keyboard.up:
-        tank.y = tank.y - 2
+        tank.y = tank.y - 1
         tank.angle = 270
+        sounds.s4.play()
     elif keyboard.down:
-        tank.y = tank.y + 2
+        tank.y = tank.y + 1
         tank.angle = 90
+        sounds.s4.play()
 
     if tank.collidelist(walls) != -1:
         tank.x = original_x
@@ -60,12 +64,14 @@ def update():
             bullet.y = tank.y
             bullets.append(bullet)
             bullet_holdoff = 100
+            sounds.bullet_sound.play()
     else:
         bullet_holdoff = bullet_holdoff - 1
 
     for bullet in bullets:
+        
         if bullet.angle == 0:
-            bullet.x = bullet.x - 5
+            bullet.x = bullet.x  -5
         elif bullet.angle == 90:
             bullet.y = bullet.y + 5
         elif bullet.angle == 180:
