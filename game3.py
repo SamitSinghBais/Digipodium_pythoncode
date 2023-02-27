@@ -35,6 +35,7 @@ def update():
         image.y = 520
         sounds.s2.play()
 
+
      
 def draw():
     #screen.fill("black")
