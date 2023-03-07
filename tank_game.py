@@ -60,6 +60,7 @@ def update():
         if keyboard.space:
             bullet = Actor('bullet-tank')
             bullet.angle = tank.angle
+            print(bullet.angle)
             bullet.x = tank.x
             bullet.y = tank.y
             bullets.append(bullet)
@@ -69,9 +70,8 @@ def update():
         bullet_holdoff = bullet_holdoff - 1
 
     for bullet in bullets:
-        
-        if bullet.angle == 0:
-            bullet.x = bullet.x  -5
+        if bullet.angle == 360:
+            bullet.x -= 5
         elif bullet.angle == 90:
             bullet.y = bullet.y + 5
         elif bullet.angle == 180:
