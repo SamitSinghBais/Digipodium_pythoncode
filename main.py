@@ -13,4 +13,5 @@ for line in data:
 
 #print(newData)
 df = pd.DataFrame(newData, columns=["c1","c2","c3","c4","type"])
-df.to_csv("py.csv",index=False)
+df.to_csv("py.csv",index=True)
+print(df)
